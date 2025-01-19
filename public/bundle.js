@@ -21168,7 +21168,7 @@ const connectRecvTransport = async () => {
       kind: params.kind,
       rtpParameters: params.rtpParameters
     })
-
+    console.log('consumer', consumer)
     // destructure and retrieve the video track from the producer
     const { track } = consumer
 
