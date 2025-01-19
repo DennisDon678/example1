@@ -225,6 +225,7 @@ const createRecvTransport = async () => {
 }
 
 const connectRecvTransport = async () => {
+  console.log('connectRecvTransport')
   // for consumer, we need to tell the server first
   // to create a consumer based on the rtpCapabilities and consume
   // if the router can consume, it will send back a set of params as below
