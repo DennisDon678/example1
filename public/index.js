@@ -249,7 +249,7 @@ const connectRecvTransport = async () => {
     console.log('consumer', consumer)
     // destructure and retrieve the video track from the producer
     const { track } = consumer
-
+    console.log('track', track)
     remoteVideo.srcObject = new MediaStream([track])
 
     // the server consumer started with media paused
