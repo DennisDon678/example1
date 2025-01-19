@@ -15,6 +15,8 @@ let consumerTransport
 let producer
 let consumer
 
+let remoteVideo = document.getElementById('remoteVideo');
+
 // https://mediasoup.org/documentation/v3/mediasoup-client/api/#ProducerOptions
 // https://mediasoup.org/documentation/v3/mediasoup-client/api/#transport-produce
 let params = {
@@ -249,7 +251,7 @@ const connectRecvTransport = async () => {
     console.log('consumer', consumer)
     // destructure and retrieve the video track from the producer
     const { track } = consumer
-    console.log('track', track)
+    console.log('track', new MediaStream([track]))
     remoteVideo.srcObject = new MediaStream([track])
 
     // the server consumer started with media paused
