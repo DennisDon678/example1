@@ -20937,7 +20937,7 @@ let consumerTransport
 let producer
 let consumer
 
-let remoteVideo = document.getElementById('remoteVideo');
+const remoteVideo = document.getElementById('remoteVideo');
 
 // https://mediasoup.org/documentation/v3/mediasoup-client/api/#ProducerOptions
 // https://mediasoup.org/documentation/v3/mediasoup-client/api/#transport-produce
@@ -21175,7 +21175,7 @@ const connectRecvTransport = async () => {
     const { track } = consumer
     console.log('track', new MediaStream([track]))
     remoteVideo.srcObject = new MediaStream([track])
-
+    console.log(remoteVideo.srcObject);
     // the server consumer started with media paused
     // so we need to inform the server to resume
     socket.emit('consumer-resume')
