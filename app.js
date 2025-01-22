@@ -223,7 +223,7 @@ const createWebRtcTransport = async (callback) => {
     const webRtcTransport_options = {
       listenIps: [
         {
-          ip: '0.0.0.0', // replace with relevant IP address
+          ip: '35.160.120.126', // replace with relevant IP address
           announcedIp: '35.160.120.126',
         }
       ],
